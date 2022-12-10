@@ -38,8 +38,7 @@ public class ServerResource {
                         .message("servers retrieved")
                         .status(OK)
                         .statusCode(OK.value())
-                        .build()
-        );
+                        .build());
     }
 
     @GetMapping("/ping/{ipAddress}")
@@ -54,8 +53,7 @@ public class ServerResource {
                         .message(server.getStatus() == SERVER_UP ? "Ping Success" : "Ping Failed")
                         .status(OK)
                         .statusCode(OK.value())
-                        .build()
-        );
+                        .build());
     }
 
     @PostMapping("/save")
@@ -67,8 +65,7 @@ public class ServerResource {
                         .message("Server created")
                         .status(CREATED)
                         .statusCode(CREATED.value())
-                        .build()
-        );
+                        .build());
     }
 
     @GetMapping("/get/{id}")
@@ -80,8 +77,7 @@ public class ServerResource {
                         .message("Server Retrieved")
                         .status(OK)
                         .statusCode(OK.value())
-                        .build()
-        );
+                        .build());
     }
 
     @DeleteMapping("/delete/{id}")
@@ -93,8 +89,7 @@ public class ServerResource {
                         .message("Server Deleted")
                         .status(OK)
                         .statusCode(OK.value())
-                        .build()
-        );
+                        .build());
     }
 
     @GetMapping(path = "/image/{fileName}", produces = IMAGE_PNG_VALUE)
